@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Penalty Shootout Scoreboard</title>
+</head>
+<body class="flex">
+    <div class="scoreboard container">
+        <h1>Penalty Shoot ⚽</h1>
+        <div class="user-outcomes grid">
+            <p class="player">You</p>
+            <div class="outcome-circles flex">
+                <div class="outcome-circle user-circle"></div>
+                <div class="outcome-circle user-circle"></div>
+                <div class="outcome-circle user-circle"></div>
+                <div class="outcome-circle user-circle"></div>
+                <div class="outcome-circle user-circle"></div>
+            </div>
+            <p class="my-score score"></p>
+        </div>
+        <div class="computer-outcomes grid">
+            <p class="player">AI</p>
+            <div class="outcome-circles flex">
+                <div class="outcome-circle computer-circle"></div>
+                <div class="outcome-circle computer-circle"></div>
+                <div class="outcome-circle computer-circle"></div>
+                <div class="outcome-circle computer-circle"></div>
+                <div class="outcome-circle computer-circle"></div>
+            </div>
+            <p class="computer-score score"></p>
+        </div>
+    </div>
+    <h2 class="game-winner"></h2>
+    <div class="shooting-area grid container">
+        <div class="goal-area left-area grid"></div>
+        <div class="goal-area center-area grid"></div>
+        <div class="goal-area right-area grid"></div>
+    </div>
+    <div class="user-inputs flex container">
+        <select name="goal-areas" id="goal-areas" class="shot-selector">
+            <option value="">Pick goal area</option>
+            <option value="left">Left</option>
+            <option value="center">Center</option>
+            <option value="right">Right</option>
+        </select>
+        <button class="shot-btn">Shoot</button>
+        <button class="reset-btn">Reset</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
