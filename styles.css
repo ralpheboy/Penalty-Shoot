@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", system-ui;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #F0FFF0;
+    color: #010B13;
+    padding: 2.4rem;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+}
+
+.container {
+    max-width: 120rem;
+}
+
+label {
+    display: block;
+}
+
+button {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+h1 {
+    font-size: 3.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.user-outcomes, .computer-outcomes, .outcome-circles {
+    align-items: center;
+}
+
+.user-outcomes, .computer-outcomes {
+    grid-template-columns: 3fr 4fr 1fr;
+    padding: 1rem 0;
+}
+
+.player, .score {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.player {
+    letter-spacing: 1px;
+}
+
+.outcome-circles {
+    gap: 1.4rem;
+}
+
+.outcome-circle {
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+    border: 2px solid #2A3439;
+    border-radius: 100%;
+    background-color: transparent;
+}
+
+.game-winner {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.shooting-area {
+    background-image: url("/images/football-net.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 20rem;
+    border-top: 6px solid #010B13;
+    border-right: 6px solid #010B13;
+    border-left: 6px solid #010B13;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 100rem;
+}
+
+.goal-area {
+    z-index: 5;
+    place-items: center;
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
+
+.user-inputs {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.goal-area-label {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.shot-selector {
+    padding: 1.8rem;
+    border-radius: 4px;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #010B13;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.shot-btn, .reset-btn {
+    color: #fff;
+    padding: 2rem 2.8rem;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+.shot-btn {
+    background-color: #03C03C;
+}
+
+.reset-btn {
+    background-color: #010B13;
+}
+
+.shot-btn:active, .reset-btn:active {
+    transform: translate(0, 3px);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 640px) {
+    .player, .score {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .player {
+        letter-spacing: unset;
+    }
+
+    .player, .score {
+        font-size: 1.8rem;
+    }
+
+    .shooting-area {
+        height: 24rem;
+    }
+}
